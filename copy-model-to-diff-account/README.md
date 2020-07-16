@@ -52,7 +52,7 @@ aws-deepracer-azslk243-a42...ok0
 </pre>
 
 ### Download to local directory
-1. `model-metadata/#MODEL-NAME/model_metadata.json` to `TEMP-MODEL-DIR`  : Contains model's action space definition. (copy of same is also present in `SageMaker-RoboMaker` directory)
+1. `model-metadata/#MODEL-NAME/model_metadata.json` to `TEMP-MODEL-DIR`  : Contains model's action space definition. (copy of same is also present in `DeepRacer-SageMaker-RoboMaker` directory)
 2. `reward-functions/#MODEL-NAME/reward_function.py` to `TEMP-MODEL-DIR` : Contains reward function you used for training your model. 
 3.`DeepRacer-SageMaker-RoboMaker-comm-TIMESTAMP-2004270...8c2e/model/*` to `TEMP-MODEL-DIR/model-files`: Contains multiple files that define trained model we are interested to copy over.
 
@@ -85,9 +85,9 @@ Similar to **Step#A2** locate key info (model name and timestamp) for new placeh
 
 Open browser tab with AWS S3 URL [https://s3.console.aws.amazon.com] and go into your DeepRacer S3 bucket (`aws-deepracer-xyz`). Locate respective directories in S3 and delete placeholder model files and upload files from source model that we had downloaded to our local system.
 
-1. `TEMP-MODEL-DIR/model_metadata.json`  to `model-metadata/#MODEL-NAME` : Copy of this file is also in `SageMaker-RoboMaker` directory
+1. `TEMP-MODEL-DIR/model_metadata.json`  to `model-metadata/#MODEL-NAME` : Copy of this file is also in `DeepRacer-SageMaker-RoboMaker` directory
 2. `TEMP-MODEL-DIR/reward_function.py` to `reward-functions/#MODEL-NAME` : You can skip this file as we are not planning to train any further with this reward function. 
-3.`TEMP-MODEL-DIR/model-files/*` to `DeepRacer-SageMaker-RoboMaker-comm-TIMESTAMP-2004270...8c2e/model`: Make sure you delete all the files before you upload as file names here are different
+3. `TEMP-MODEL-DIR/model-files/*` to `DeepRacer-SageMaker-RoboMaker-comm-TIMESTAMP-2004270...8c2e/model`: Make sure you delete all the files before you upload as file names here are different
 
 
 ## Step #C
